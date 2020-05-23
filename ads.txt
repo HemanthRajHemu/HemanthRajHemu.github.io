@@ -28,7 +28,6 @@ indexexchange.com, 175407, RESELLER
 rubiconproject.com, 16414, RESELLER, 0bfd66d529a55807
 pubmatic.com, 156423, RESELLER, 5d62403b186f2ace
 adtech.com,12094,RESELLER
-
 google.com, pub-5995202563537249, RESELLER, f08c47fec0942fa0 
 appnexus.com, 10239, RESELLER, f5ab79cb980f11d1
 openx.com,537120563,RESELLER,6a698e2ec38604c6
