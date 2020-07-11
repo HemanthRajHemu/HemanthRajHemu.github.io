@@ -220,7 +220,7 @@ function DisTabTotal(i) {
 }
 function DisSGPATotal() {
     var newdiv = document.createElement('div');
-    newdiv.innerHTML = `Thus, SGPA = ${CalSubSol()} / ${TotalPer()} =  ${SGPA}`;
+    newdiv.innerHTML = `Thus, SGPA = ${CalSubSol()} / ${CalTotalCred()} =  ${SGPA}`;
     document.getElementById("FinalSGPA").appendChild(newdiv);
 }
 function calculate() {
