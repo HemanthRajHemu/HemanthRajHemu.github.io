@@ -27,7 +27,7 @@ function addInput(divName, counter) {
         <div class='row'><div class='col-25'><label> SGPA of Sem - ${i} </label></div><div class='col-75'> <input type='text' id='${sid}' > </div> </div>
         <hr/>`;
         document.getElementById(divName).appendChild(newdiv);
-        //console.log(i);
+        ////console.log(i);
     }
 }
 function getValue() {
@@ -39,14 +39,14 @@ function getValue() {
         ASGPA.push(sgpaid);
 
 
-        console.log("Test");
-        console.log(i);
-        console.log("SGPA ID: " + sgpaid);
-        console.log("Credit ID: " + credid);
+        //console.log("Test");
+        //console.log(i);
+        //console.log("SGPA ID: " + sgpaid);
+        //console.log("Credit ID: " + credid);
 
-        console.log("Array");
-        console.log(Acre);
-        console.log(ASGPA);
+        //console.log("Array");
+        //console.log(Acre);
+        //console.log(ASGPA);
 
     }
 }
@@ -54,14 +54,14 @@ function CalSubsol() {
     for (i = 0; i < total; i++) {
         ASol[i] = parseFloat(Acre[i]) * parseFloat(ASGPA[i]);
     }
-    console.log("CalSubsol :" + ASol);
+    //console.log("CalSubsol :" + ASol);
 }
 function CalTotCre() {
     var temtotcre = 0;
     for (i = 0; i < total; i++) {
         temtotcre = temtotcre + parseFloat(Acre[i]);
     }
-    console.log("In CalTotCre Total Credit: " + temtotcre);
+    //console.log("In CalTotCre Total Credit: " + temtotcre);
     return temtotcre;
 }
 function CalTotSubsol() {
@@ -70,7 +70,7 @@ function CalTotSubsol() {
         temptotsubsol = temptotsubsol + parseFloat(ASol[i]);
     }
     return temptotsubsol;
-    console.log("In CalTotSubsol Addition of subsol: " + temptotsubsol);
+    //console.log("In CalTotSubsol Addition of subsol: " + temptotsubsol);
 }
 function DisCGPA(i) {
     var newdiv = document.createElement('div');
@@ -95,7 +95,7 @@ function CalTotSGPA() {
     for (i = 0; i < total; i++) {
         temptotSGPA = temptotSGPA + parseFloat(ASGPA[i]);
     }
-    console.log("In CalTOtSGPA total SGPA is: " + temptotSGPA);
+    //console.log("In CalTOtSGPA total SGPA is: " + temptotSGPA);
     return temptotSGPA;
 }
 function DisTabTotal(i) {
@@ -122,7 +122,7 @@ function calculate() {
     totCre = CalTotCre();
     totSubsol = CalTotSubsol();
     CGPA = (totSubsol / totCre).toFixed(4);
-    console.log("CGPA is :" + CGPA);
+    //console.log("CGPA is :" + CGPA);
     DisCGPA(CGPA);
     for (i = 0; i < total; i++) {
         DisTable(i);
@@ -138,7 +138,7 @@ function WhatsappShare() {
     var url = window.location.href;
     var api = "https://api.whatsapp.com/send?text=Hi,%20Buddy%20I%20found%20this%20Usefull%20Website%20named%20Future%20Vision%20BIE,%20One%20Stop%20Study%20Repository%20for%20VTU%20Students%0D%0ALink:"
     var both = api + url;
-    //console.log(both);
+    ////console.log(both);
     window.open(both, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
 }
 function ClearData() {
