@@ -216,6 +216,8 @@
 											document.getElementById("urid").innerText = uid;
 											document.getElementById("initLoad").style.display = "none";
 											document.getElementById("Step4").style.display = "block";
+											var elmnt = document.getElementById("Step4");
+											elmnt.scrollIntoView();
 										}
 										else if (val1 == null) {
 											//RDAuth
@@ -341,6 +343,7 @@
 				<h3 id="downCounter">
 					Your File will be Downloaded in <span id="reddown">10</span> seconds
 				</h3>
+				<h1 id="Dinfo" style="display: none;"> Download started Automatically. </h1>
 				<div id="DBtn"></div>
 			</div>
 

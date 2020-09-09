@@ -125,6 +125,7 @@ function RedCountNW(url) {
       document.getElementById('DBtn').appendChild(newdiv);
       //downCounter
       document.getElementById("downCounter").style.display = "none";
+      document.getElementById("Dinfo").style.display = "block";
     //console.log("DOne");
   } else {
     // Update remaining seconds
