@@ -136,12 +136,12 @@ function RedCountNW(url) {
 }
 
 function PDF(code) {
-  var rootRef = firebase.database().ref();
+  var rootRef = firebase.database().ref('Materials');
   rootRef.once("value")
     .then(function (snapshot) {
       var GView = "https://docs.google.com/viewer?url=";
       var Em = "&embedded=true";
-      Value = snapshot.child('Materials').child(code).child('Link').val();
+      Value = snapshot.child(code).child('Link').val();
       var full = GView + Value + Em;
       var newdiv = document.createElement('div');
       newdiv.innerHTML = `<iframe src=${full} style="width:100%; height:500px;" frameborder="10px"> </iframe>`;
@@ -158,10 +158,10 @@ function DownloadButton(code) {
       document.getElementById('PDFDownload').appendChild(newdiv1);
 }
 function DownloadRedirect(code) {
-  var rootRef = firebase.database().ref();
+  var rootRef = firebase.database().ref('Materials');
   rootRef.once("value")
     .then(function (snapshot) {
-      Value = snapshot.child('Materials').child(code).child('Link').val();
+      Value = snapshot.child(code).child('Link').val();
       
       url = Value;
       RedCountNW(url);

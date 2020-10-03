@@ -11,14 +11,14 @@ function getUID() {
     });
 }
 function writeUserDataMail(userId, name, email, veri) {
-    firebase.database().ref().child('Users').child(userId).child("UserInformation").update({
+    firebase.database().ref('Users/' + userId).child("UserInformation").update({
         userEmail: email,
         displayName: name,
         VerifiedBy: veri
     });
 }
 function writeUserDataPhone(userId, phno, veri) {
-    firebase.database().ref().child('Users').child(userId).child("UserInformation").update({
+    firebase.database().ref('Users/' + userId).child("UserInformation").update({
         userPhone: phno,
         VerifiedBy: veri
     });
@@ -30,7 +30,7 @@ function WriteUserFormPhone(userId, name, usn, mail, dob, cs, gndr, cn) {
     var realmonth = months[d.getMonth()];
     var date1 = d.getDate();
     var ymd = year + ':' + realmonth + ':' + date1;
-    firebase.database().ref().child('Users').child(userId).child("UserInformation").update({
+    firebase.database().ref('Users/' + userId).child("UserInformation").update({
         userName: name,
         userUSN: usn,
         userEmail: mail,
@@ -38,11 +38,11 @@ function WriteUserFormPhone(userId, name, usn, mail, dob, cs, gndr, cn) {
         userGender: gndr,
         userCollge: cn,
     });
-    firebase.database().ref().child('Users').child(userId).child("UserInformation").child("UpdateOn").update({
+    firebase.database().ref('Users/' + userId).child("UserInformation").child("UpdateOn").update({
         CurrentTime: ymd,
         UserSem: cs
     });
-    firebase.database().ref().child('Users').child(userId).child("Status").update({
+    firebase.database().ref('Users/' + userId).child("Status").update({
         Flag: '1010',
     });
 }
@@ -53,7 +53,7 @@ function WriteUserFormMail(userId, name, usn, phno, dob, cs, gndr, cn) {
     var realmonth = months[d.getMonth()];
     var date1 = d.getDate();
     var ymd = year + ':' + realmonth + ':' + date1;
-    firebase.database().ref().child('Users').child(userId).child("UserInformation").update({
+    firebase.database().ref('Users/' + userId).child("UserInformation").update({
         userName: name,
         userUSN: usn,
         userPhone: phno,
@@ -61,11 +61,11 @@ function WriteUserFormMail(userId, name, usn, phno, dob, cs, gndr, cn) {
         userGender: gndr,
         userCollge: cn,
     });
-    firebase.database().ref().child('Users').child(userId).child("UserInformation").child("UpdateOn").update({
+    firebase.database().ref('Users/' + userId).child("UserInformation").child("UpdateOn").update({
         CurrentTime: ymd,
         UserSem: cs
     });
-    firebase.database().ref().child('Users').child(userId).child("Status").update({
+    firebase.database().ref('Users/' + userId).child("Status").update({
         Flag: '1100',
     });
 }

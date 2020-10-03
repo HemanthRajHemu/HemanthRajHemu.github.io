@@ -210,11 +210,11 @@
 
 							if (providerID == "phone") {
 								var val1 = "";
-								var rootRef = firebase.database().ref();
+								var rootRef = firebase.database().ref('Users/' + uid);
 								rootRef.once("value")
 									.then(function (snapshot) {
 										//var key1 = snapshot.child("Users").child(uid).child("Status").child("Flag").key;
-										val1 = snapshot.child('Users').child(uid).child('Status').child('Flag').val();
+										val1 = snapshot.child('Status').child('Flag').val();
 										if (val1 == null) {
 											writeUserDataPhone(uid, phoneNumber, providerID);
 											document.getElementById("initLoad").style.display = "none";
@@ -303,11 +303,11 @@
 							}
 							else if (providerID == "google.com") {
 								var val1 = "";
-								var rootRef = firebase.database().ref();
+								var rootRef = firebase.database().ref('Users/' + uid);
 								rootRef.once("value")
 									.then(function (snapshot) {
 										//var key1 = snapshot.child("Users").child(uid).child("Status").child("Flag").key;
-										val1 = snapshot.child('Users').child(uid).child('Status').child('Flag').val();
+										val1 = snapshot.child('Status').child('Flag').val();
 										//console.log(providerData);
 										//console.log(val1);
 										if (val1 == null) {
