@@ -795,4 +795,9 @@ input[type=visit]:hover {
 	text-align: center;
 }
 
+.autoxy {
+	overflow:auto;
+	width:auto;
+}
+
 /*------------------------------- END ALL --------------------------------------*/
