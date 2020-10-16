@@ -173,6 +173,9 @@
 		<article>
 			<!--FireBase Login-->
 			<script>
+				var elmnt = document.getElementById("firebaseui-auth-container");
+ 				elmnt.scrollIntoView();
+				
 				var SuccURL;
 				const queryString = window.location.search;
 				//console.log(queryString);
@@ -241,7 +244,7 @@
 				<h1>Login / Sign in </h1>
 				</p>
 			</div>
-			<br /><br /><br />
+			<br />
 			<div class="desp" id="firebaseui-auth-container"></div>
 
 
