@@ -219,6 +219,8 @@
 											writeUserDataPhone(uid, phoneNumber, providerID);
 											document.getElementById("initLoad").style.display = "none";
 											document.getElementById("Step2").style.display = "block";
+											var elmnt = document.getElementById("Step2");
+ 											elmnt.scrollIntoView();
 											document.getElementById("Rec").onclick = function () {
 												var fn = document.getElementById("fullnameP").value;
 												var usn = document.getElementById("usnP").value;
@@ -281,6 +283,8 @@
 													WriteUserFormPhone(uid, fn, usn, mail, dob, cs, gndr, cn);
 													document.getElementById("Step2").style.display = "none";
 													document.getElementById("Step3").style.display = "block";
+													var elmnt = document.getElementById("Step3");
+ 													elmnt.scrollIntoView();
 													url = SuccURL;
 													RedCount(url);
 												}
@@ -291,6 +295,8 @@
 											//console.log("Login Successful");
 											document.getElementById("initLoad").style.display = "none";
 											document.getElementById("Step3").style.display = "block";
+											var elmnt = document.getElementById("Step3");
+ 											elmnt.scrollIntoView();
 											url = SuccURL;
 											//console.log("in Flag ");
 											//console.log(url);
@@ -314,6 +320,8 @@
 											writeUserDataMail(uid, displayName, email, providerID);
 											document.getElementById("initLoad").style.display = "none";
 											document.getElementById("Step4").style.display = "block";
+											var elmnt = document.getElementById("Step4");
+ 											elmnt.scrollIntoView();
 											document.getElementById("Rec1").onclick = function () {
 												var fn = document.getElementById("fullnameM").value;
 												var usn = document.getElementById("usnM").value;
@@ -376,6 +384,8 @@
 													WriteUserFormMail(uid, fn, usn, phno, dob, cs, gndr, cn);
 													document.getElementById("Step4").style.display = "none";
 													document.getElementById("Step3").style.display = "block";
+													var elmnt = document.getElementById("Step3");
+ 													elmnt.scrollIntoView();
 													url = SuccURL;
 													RedCount(url);
 												}
@@ -387,6 +397,8 @@
 											//console.log("Login Successful");
 											document.getElementById("initLoad").style.display = "none";
 											document.getElementById("Step3").style.display = "block";
+											var elmnt = document.getElementById("Step3");
+ 											elmnt.scrollIntoView();
 											url = SuccURL;
 											RedCount(url);
 										}
@@ -400,6 +412,8 @@
 							//console.log("Unauthorized Access");
 							document.getElementById("initLoad").style.display = "none";
 							document.getElementById("Step1").style.display = "block";
+							var elmnt = document.getElementById("Step1");
+ 							elmnt.scrollIntoView();
 							url = "/login.html"
 							RedCount(url);
 						}

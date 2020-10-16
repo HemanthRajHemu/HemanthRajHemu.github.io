@@ -197,15 +197,21 @@
 										document.getElementById("urid").innerText = uid;
 										document.getElementById("initLoad").style.display = "none";
 										document.getElementById("Step4").style.display = "block";
+										var elmnt = document.getElementById("Step4");
+ 										elmnt.scrollIntoView();
 									}
 									else if (val1 == null) {
 										document.getElementById("initLoad").style.display = "none";
 										document.getElementById("Step1").style.display = "block";
+										var elmnt = document.getElementById("Step1");
+ 										elmnt.scrollIntoView();
 									}
 									else if (val1 == '1111') {
 										document.getElementById("initLoad").style.display = "none";
 										document.getElementById("Step3").style.display = "block";
 										document.getElementById("ubid").innerText = uid;
+										var elmnt = document.getElementById("Step3");
+ 										elmnt.scrollIntoView();
 									}
 
 
@@ -214,10 +220,8 @@
 							// User is signed out.
 							document.getElementById("initLoad").style.display = "none";
 							document.getElementById("Step2").style.display = "block";
-							/*console.log("Unauthorized Access");
-							document.getElementById("Step1").style.display = "block";
-							url = "/login.html"
-							RedCount(url);*/
+							var elmnt = document.getElementById("Step2");
+ 							elmnt.scrollIntoView();
 						}
 					}, function (error) {
 						console.log(error);
